@@ -1,0 +1,52 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hero-image {
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.cards-graphics {
+    padding: 6rem 8rem;
+}
+
+.card-graphic-front {
+    /* background-image: url(./images/bg-card-front.png);
+    background-repeat: no-repeat;
+    height: 245px; */
+}
+
+.card-graphic-back {
+
+    margin: 2rem 6rem;
+}
+
+.input-container {
+    width: 25rem;
+    position: absolute;
+    right: 10rem;
+    top: 15rem;
+}
+
+input {
+    width: 18rem;
+    
+}
