@@ -18,45 +18,43 @@
     <div class="card-graphic-front">
       <img class="bg-front" src="./images/bg-card-front.png" alt="">
       <img class="logo" src="./images/card-logo.svg" alt="">
-      <span class="front-number">0000 0000 0000 0000</span> 
-      <span class="front-name">Jane Appleseed</span> 
-      <span class="front-exp">00/00</span> 
+      <span id="front-number">0000 0000 0000 0000</span> 
+      <span id="front-name">Jane Appleseed</span> 
+      <span id="front-exp">00/00</span> 
     </div>
     <div class="card-graphic-back">
       <img class="bg-back" src="./images/bg-card-back.png" alt="">
-      <span class="back-number">000</span>
+      <span id="back-number">000</span>
     </div>
   </div>
 </div>
 
 <div class="input-container">
-  <div class="field-group">
+  <div class="field-group1">
     <label for="name">Cardholder Name</label><br>
     <input name='name' id="name" type="text" placeholder="e.g. Jane Appleseed">
+    <p id="error-text">error and shit</p>
   </div>
   
-  <div class="field-group">
+  <div class="field-group1">
     <label for="card-number">Card Number</label><br>
-    <input name='card-number' id="card-number" type="number" placeholder="e.g. 1234 5678 9123 0000">
+    <input name='card-number' id="card-number" type="text" inputmode="numeric" placeholder="e.g. 1234 5678 9123 0000">
+    <p id="error-text">error and shit</p>
   </div>
   
-  <div class="field-group">
-    <label for="exp-date">Exp. Date (MM/YY)</label><br>
-    <input name="mm-number" id="mm-number" type="number" placeholder="MM">
-    <input name="yy-number" id="yy-number" type="number" placeholder="YY">
-  </div>
-  
-  <div class="field-group">
-    <label for="cvc">CVC</label><br>
-    <input name="cvc-number" id="cvc-number" type="number" placeholder="e.g. 123">
+  <div class="field-group2">
+    <label for="exp-date">Exp. Date (MM/YY)</label>
+    <label for="cvc" class="cvc-label">CVC</label><br>
+    <input name="mm-number" id="mm-number" type="text" inputmode="numeric" maxlength="2" placeholder="MM">
+    <input name="yy-number" id="yy-number" type="text" inputmode="numeric" maxlength="2" placeholder="YY">
+    <input name="cvc-number" id="cvc-number" type="text" inputmode="numeric" maxlength="3" placeholder="e.g. 123">
+    <p id="error-text">error and shit</p>
   </div>
   
   
   <button type="submit" id="btn-submit">Confirm</button>
 </div>
- 
 
-  <!-- Completed state start -->
 
   Thank you!
   We've added your card details
@@ -67,5 +65,6 @@
     Coded by <a href="https://www.frontendmentor.io/profile/Eneyee">Eneyee</a>.
   </footer>
 </div>
+<script src="scripts.js"></script>
 </body>
 </html>
