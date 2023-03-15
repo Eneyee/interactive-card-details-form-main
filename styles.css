@@ -28,15 +28,56 @@ body {
     padding: 6rem 8rem;
 }
 
-.card-graphic-front {
-    /* background-image: url(./images/bg-card-front.png);
-    background-repeat: no-repeat;
-    height: 245px; */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.card-graphic-front,
+.card-graphic-back {
+    width: min-content;
+    position: relative;
+    color: var(--White);
+}
+
+.card-graphic-front > *:not(.bg-front),
+.card-graphic-back > *:not(.bg-back) {
+    position: absolute;
+}
+
+.bg-front,
+.bg-back {
+    max-width: revert;
+}
+
+.logo {
+    left: 2rem;
+    top: 2rem;
+}
+
+.front-number {
+    font-size: 1.8rem;
+    left: 2rem;
+    top: 50%;
+}
+
+.front-name {
+    left: 2rem;
+    bottom: 2rem;
+}
+
+.front-exp {
+    right: 2rem;
+    bottom: 2rem;
 }
 
 .card-graphic-back {
-
     margin: 2rem 6rem;
+}
+
+.back-number {
+    top: 45%;
+    right: 3rem;
 }
 
 .input-container {
