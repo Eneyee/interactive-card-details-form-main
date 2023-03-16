@@ -156,3 +156,49 @@ input:focus {
 #btn-submit:hover {
     background-color: var(--Dark-grayish-violet);
 }
+
+.ty-container {
+    width: 25rem;
+    position: absolute;
+    right: 16rem;
+    top: 25%;
+    text-align: center;
+}
+
+.img-complete {
+    margin-left: 10.3rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.small-text {
+    color: var(--Dark-grayish-violet);
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
+#btn-continue {
+    margin-top: 1rem;
+    width: 18rem;
+    height: 2.5rem;
+    color: var(--White);
+    background-color: var(--Very-dark-violet);
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-continue:hover {
+    background-color: var(--Dark-grayish-violet);
+}
+
+.input-container{
+    display:none;
+}
