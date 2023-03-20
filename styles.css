@@ -26,6 +26,57 @@ body {
     height: 100vh;
 }
 
+.notif-container {
+    position: fixed;
+    bottom: -2rem;
+    left: 8rem;
+    transform: translateY(-100%);
+    transition: 2.8s;
+}
+
+.text-container {
+    width: 30rem;
+    height: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--Light-grayish-violet);
+}
+
+.text-container::before {
+    content: "";
+    width: 0rem;
+    height: 0rem;
+    position: absolute;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid var(--Light-grayish-violet);
+    border-top: 1rem solid var(--Light-grayish-violet);
+    border-bottom: 1rem solid transparent;
+    left: -1.5rem;
+    top: 1.5rem;
+}
+
+.close-img {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    height: auto;
+    width: 1rem;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 5rem;
+    height: auto;
+    position: absolute;
+    right: 32rem;
+}
+
+.profile-pic > img {
+    border-radius: 50%;
+}
+
 .cards-graphics {
     padding: 6rem 8rem;
 }
@@ -199,7 +250,7 @@ h1 {
     background-color: var(--Dark-grayish-violet);
 }
 
-.input-container{
+.ty-container{
     display:none;
 }
 
