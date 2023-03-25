@@ -169,11 +169,11 @@ input:focus {
     border: 2px solid transparent;
 }
 
-#error-text {
+.error-text {
     width: 10rem;
     font-size: 0.8rem;
     color: var(--Red);
-    display: none;
+    
 }
 
 .field-group1, .field-group2 {
