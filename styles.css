@@ -28,15 +28,19 @@ body {
 
 .notif-container {
     position: fixed;
-    bottom: -2rem;
+    bottom: -10rem;
     left: 8rem;
-    transform: translateY(-100%);
-    transition: 2.8s;
+    transform: translateY(-50%);
+    transition: all 2.8s ease;
+}
+
+.active {
+    bottom: 0rem;
 }
 
 .text-container {
     width: 30rem;
-    height: auto;
+    min-height: 5rem;
     padding: 1rem;
     border-radius: 1rem;
     display: flex;
