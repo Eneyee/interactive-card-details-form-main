@@ -44,17 +44,19 @@
   </div>
 </div>
 
+<div>
 <form class="input-container">
+  
   <div class="field-group1">
     <label for="name">Cardholder Name</label><br>
     <input name='name' class="name-ch" type="text" maxlength="30" placeholder="e.g. Jane Appleseed">
-    <p class="error-text, error-name"></p>
+    <p id="error-name" class="error-text"></p>
   </div>
   
   <div class="field-group1">
     <label for="card-number">Card Number</label><br>
     <input name='card-number' class="card-number" type="text" inputmode="numeric" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
-    <p class="error-text, error-ccnum"></p>
+    <p id="error-ccnum" class="error-text"></p>
   </div>
   
   <div class="field-group2">
@@ -63,14 +65,16 @@
     <input name="mm-number" class="mm-number" type="text" inputmode="numeric" maxlength="2" placeholder="MM">
     <input name="yy-number" class="yy-number" type="text" inputmode="numeric" maxlength="2" placeholder="YY">
     <input name="cvc-number" class="cvc-number" type="text" inputmode="numeric" maxlength="3" placeholder="e.g. 123">
-    <p class="error-text, error-exp-cvc"></p>
+    <p id="error-exp-cvc" class="error-text"></p>
   </div>
   
   
   <button type="submit" id="btn-submit">Confirm</button>
-</form>
 
-<div class="ty-container, hidden">
+</form>
+</div>
+
+<div class="ty-container">
   <img src="./images/icon-complete.svg" alt="" class="img-complete">
   <h1>Thank you!</h1>
   <p class="small-text">We've added your card details</p> 

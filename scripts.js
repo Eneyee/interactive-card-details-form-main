@@ -5,6 +5,7 @@ let notifText = document.getElementById("notif-text");
 
 //declared form and button
 const form = document.querySelector(".input-container");
+const tyContainer = document.querySelector(".ty-container");
 const submitBtn = document.getElementById("btn-submit");
 let inputs = document.querySelectorAll("input");
 
@@ -25,7 +26,8 @@ let frontExp = document.querySelector(".front-exp");
 let cvc = document.querySelector(".cvc-number");
 let backCvc = document.querySelector(".back-number");
 
-
+//assign .hidden to tyContainer
+tyContainer.classList.add("hidden");
 //notification function
 notifText.textContent = "Hi, name's Eneyee. Could you help me fill these? I have no idea what the correct answer is."
 
@@ -110,18 +112,32 @@ cvc.addEventListener("keyup", (e) => {
     }
 })
 
-//
-const nameError = querySelector(".error-name")
-const ccNumError = querySelector(".error-ccnum")
-const ccExpCvc = querySelector(".error-exp-cvc")
+
+
+
+
+// const errorText = document.getElementsByClassName("error-text")
+
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     switch (inputs) {
+//         case !inputs.innerHTML:
+            
+//         break;
+//         default:
+//             alert("Хуйню зробив, козаче")
+// }
+// })
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     inputs.forEach((input) => {
 		if (!input.value) {
-            nameError.innerHTML = "Can't be blank";
-            ccNumError.innerHTML = "Can't be blank";
-            ccExpCvc.innerHTML = "Can't be blank";
+            notifText.textContent = "Oh-oh, it seems like you haven't done it right. Give it another try."
+        } else {
+            notifText.textContent = "Yay! You made it! I can't believe that worked! Thank you very much for your help."
+            form.classList.add("hidden");
+            tyContainer.classList.remove("hidden");
         }
 })
 });
