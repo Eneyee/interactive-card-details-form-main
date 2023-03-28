@@ -112,18 +112,18 @@ img {
     top: 2rem;
 }
 
-#front-number {
+.front-number {
     font-size: 1.8rem;
     left: 2rem;
     top: 50%;
 }
 
-#front-name {
+.front-name {
     left: 2rem;
     bottom: 2rem;
 }
 
-#front-exp {
+.front-exp {
     right: 2rem;
     bottom: 2rem;
 }
@@ -132,7 +132,7 @@ img {
     margin: 2rem 6rem;
 }
 
-#back-number {
+.back-number {
     top: 45%;
     right: 3rem;
 }
@@ -184,16 +184,17 @@ input:focus {
     margin-left: 1rem;
 }
 
-#name, #card-number {
+.name-ch, .card-number {
     width: 18rem;
 }
 
-#mm-number, #yy-number {
+.mm-number, .yy-number {
     width: 4rem;
 }
 
-#cvc-number {
+.cvc-number {
     width: 7.5rem;
+    margin-left: 2rem;
 }
 
 #btn-submit {
@@ -254,7 +255,7 @@ h1 {
     background-color: var(--Dark-grayish-violet);
 }
 
-.ty-container{
+.hiden{
     display:none;
 }
 

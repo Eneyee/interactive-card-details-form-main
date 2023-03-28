@@ -33,44 +33,44 @@
     <div class="card-graphic-front">
       <img class="bg-front" src="./images/bg-card-front.png" alt="">
       <img class="logo" src="./images/card-logo.svg" alt="">
-      <span id="front-number">0000 0000 0000 0000</span> 
-      <span id="front-name">Jane Appleseed</span> 
-      <span id="front-exp">00/00</span> 
+      <span class="front-number">0000 0000 0000 0000</span> 
+      <span class="front-name">JANE APPLESEED</span> 
+      <span class="front-exp">00/00</span> 
     </div>
     <div class="card-graphic-back">
       <img class="bg-back" src="./images/bg-card-back.png" alt="">
-      <span id="back-number">000</span>
+      <span class="back-number">000</span>
     </div>
   </div>
 </div>
 
-<div class="input-container">
+<form class="input-container">
   <div class="field-group1">
     <label for="name">Cardholder Name</label><br>
-    <input name='name' id="name" type="text" placeholder="e.g. Jane Appleseed">
-    <p class="error-text">error and shit</p>
+    <input name='name' class="name-ch" type="text" maxlength="30" placeholder="e.g. Jane Appleseed">
+    <p class="error-text, error-name"></p>
   </div>
   
   <div class="field-group1">
     <label for="card-number">Card Number</label><br>
-    <input name='card-number' id="card-number" type="text" inputmode="numeric" placeholder="e.g. 1234 5678 9123 0000">
-    <p class="error-text" id="error-ccnum"></p>
+    <input name='card-number' class="card-number" type="text" inputmode="numeric" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+    <p class="error-text, error-ccnum"></p>
   </div>
   
   <div class="field-group2">
     <label for="exp-date">Exp. Date (MM/YY)</label>
     <label for="cvc" class="cvc-label">CVC</label><br>
-    <input name="mm-number" id="mm-number" type="text" inputmode="numeric" maxlength="2" placeholder="MM">
-    <input name="yy-number" id="yy-number" type="text" inputmode="numeric" maxlength="2" placeholder="YY">
-    <input name="cvc-number" id="cvc-number" type="text" inputmode="numeric" maxlength="3" placeholder="e.g. 123">
-    <p class="error-text">error and shit</p>
+    <input name="mm-number" class="mm-number" type="text" inputmode="numeric" maxlength="2" placeholder="MM">
+    <input name="yy-number" class="yy-number" type="text" inputmode="numeric" maxlength="2" placeholder="YY">
+    <input name="cvc-number" class="cvc-number" type="text" inputmode="numeric" maxlength="3" placeholder="e.g. 123">
+    <p class="error-text, error-exp-cvc"></p>
   </div>
   
   
   <button type="submit" id="btn-submit">Confirm</button>
-</div>
+</form>
 
-<div class="ty-container">
+<div class="ty-container, hidden">
   <img src="./images/icon-complete.svg" alt="" class="img-complete">
   <h1>Thank you!</h1>
   <p class="small-text">We've added your card details</p> 
