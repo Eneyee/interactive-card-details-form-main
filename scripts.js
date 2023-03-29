@@ -148,8 +148,8 @@ cvc.addEventListener("keyup", (e) => {
 
 // Here is a place holder, it checks for any input in any input-field 
 // If none, displays notification text. If it finds at least one symbol in any field it lets you in
-// Still not sure why it is satisfied with one input, while the code above won't let you in, unless you fill all of the fields
-// And I haven't even started with checking for correct inputs like numbers/text only 
+// Still not sure why is it satisfied with one input, while the code above won't let you in, unless you fill all of the fields
+// And I haven't even started yet writing a code for checking for correct inputs like numbers/text only 
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
