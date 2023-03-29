@@ -12,12 +12,13 @@
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
     box-sizing: border-box;
+    
 }
 
 body {
     min-height: 100%;
     position: relative;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .hero-image {
@@ -42,7 +43,7 @@ body {
 }
 
 .text-container {
-    width: 30rem;
+    max-width: 30rem;
     min-height: 5rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -69,7 +70,7 @@ body {
     top: 0.5rem;
     right: 0.5rem;
     height: auto;
-    width: 1rem;
+    max-width: 1rem;
     cursor: pointer;
 }
 
@@ -77,7 +78,7 @@ body {
     width: 5rem;
     height: auto;
     position: absolute;
-    right: 32rem;
+    left: -7rem;
 }
 
 .profile-pic > img {
@@ -86,6 +87,8 @@ body {
 
 .cards-graphics {
     padding: 6rem 8rem;
+    max-height: 100vh;
+
 }
 
 img {
@@ -262,3 +265,128 @@ h1 {
     display:none;
 }
 
+
+@media (max-width: 83em) {
+    .hero-image {
+        width: 100vw;
+        height: 30vh;
+    }
+
+    .notif-container {
+        position: absolute;
+        top: 70rem;
+        transform: translateY(-50%);
+        transition: all 2.8s ease;
+        z-index: 9;
+        margin-right: 1rem;
+        max-width: 16rem;
+    }
+
+    .notif-container > * :not(.text-container::before),
+    .notif-container > * :not(.close-img) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .active {
+        top: 38rem;
+        
+    }
+    
+    #notif-text {
+        font-size: 0.7rem;
+    }
+
+    .cards-graphics {
+        position: relative;
+        display: block;
+        max-width: 40rem;
+        margin: 0rem auto;
+        padding: 0;
+        height: 20rem;
+        width: 20rem;
+        
+    }
+
+    .card-graphic-front,
+    .card-graphic-back {
+        width: max-content;
+    }
+    
+    .card-graphic-front {
+        margin: 0rem 1rem;
+        position: absolute;
+        z-index: 9;
+        top: 7rem;
+        left: auto;
+        
+    }
+
+    .card-graphic-back {
+        margin: 0rem 1rem;
+        position: absolute;
+        top: 1rem;
+        right: 0rem;
+    }
+
+    .bg-front,
+    .bg-back {
+        max-width: 16rem;
+    }
+
+    .logo {
+        max-height: 15%;
+        max-width: 15%;
+    }
+
+    .front-number {
+        font-size: 1.2rem;
+    }
+
+    .front-name {
+        font-size: 0.8rem;
+    }
+
+    .front-exp {
+        right: 2.5rem;
+        bottom: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .back-number {
+        top: 45%;
+        right: 2.5rem;
+        font-size: 0.8rem;
+    }
+
+    .input-container {
+        width: 18rem;
+        position: absolute;
+        top: 28rem;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .cvc-number {
+        width: 7.3rem;
+        margin-left: 2rem;
+    }
+
+    .ty-container {
+        width: 18rem;
+        position: absolute;
+        top: 28rem;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .img-complete {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}

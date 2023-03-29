@@ -28,7 +28,8 @@ let backCvc = document.querySelector(".back-number");
 
 //assign .hidden to tyContainer
 tyContainer.classList.add("hidden");
-//notification function
+
+//notification display function
 notifText.textContent = "Hi, name's Eneyee. Could you help me fill these? I have no idea what the correct answer is."
 
 setTimeout(() => {
@@ -41,7 +42,6 @@ const stopDisplayingNotif = () => {
 }
 
 closeBtn.addEventListener("click", stopDisplayingNotif);
-
 
 //name display function 
 nameCH.addEventListener("keyup", (e) =>{
@@ -114,20 +114,42 @@ cvc.addEventListener("keyup", (e) => {
 
 
 
+// I don't understand how to check for errors here. 
+// I've done a similar excersise where i used this code to check for text in each input, and then submitting
 
 
-// const errorText = document.getElementsByClassName("error-text")
+// form.addEventListener('submit', (e) => {
+// 	e.preventDefault();
+// 	inputs.forEach((input) => {
+// 		if (!input.value) {
+// 			input.parentElement.classList.add('input-error');
+// 		} else {
+// 			input.parentElement.classList.remove('error');
+// 			if (input.type == 'email') {
+// 				if (validateEmail(input.value)) {
+// 					input.parentElement.classList.remove('error');
+// 				} else {
+// 					input.parentElement.classList.add('error');
+// 				}
+// 			}
+// 		}
+// 	});
+// });
 
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     switch (inputs) {
-//         case !inputs.innerHTML:
-            
-//         break;
-//         default:
-//             alert("Хуйню зробив, козаче")
-// }
-// })
+// But it doesn't seem to work here
+// Also instead of adding a class ("input-error"), I want for it to add .textContent inside errorText like:
+
+// const errorText = document.querySelectorAll("error-text");
+// ...
+// errorText.textContent = "Can't be blank";
+
+//But it only works with one of the .error-text, when it even works
+
+
+// Here is a place holder, it checks for any input in any input-field 
+// If none, displays notification text. If it finds at least one symbol in any field it lets you in
+// Still not sure why it is satisfied with one input, while the code above won't let you in, unless you fill all of the fields
+// And I haven't even started with checking for correct inputs like numbers/text only 
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -135,9 +157,11 @@ form.addEventListener("submit", (e) => {
 		if (!input.value) {
             notifText.textContent = "Oh-oh, it seems like you haven't done it right. Give it another try."
         } else {
-            notifText.textContent = "Yay! You made it! I can't believe that worked! Thank you very much for your help."
+            notifText.textContent = "Yay! You made it! I can't believe it worked! Thank you very much for your help."
             form.classList.add("hidden");
             tyContainer.classList.remove("hidden");
         }
 })
 });
+
+// Whoever reads this, I hope I explained my problem correctly :)
