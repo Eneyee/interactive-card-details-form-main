@@ -175,11 +175,26 @@ input:focus {
     border: 2px solid transparent;
 }
 
-.error-text {
+.error-message{
+    gap: 0;
+}
+.error-message::after{
+    content: "Can't be blank";
     width: 10rem;
     font-size: 0.8rem;
     color: var(--Red);
-    
+    margin-top: .2rem;
+}
+
+.error-message-ccNum{
+    gap: 0;
+}
+.error-message-ccNum::after{
+    content: "Please provide a valid number";
+    width: 10rem;
+    font-size: 0.8rem;
+    color: var(--Red);
+    margin-top: .2rem;
 }
 
 .field-group1, .field-group2 {

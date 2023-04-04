@@ -56,16 +56,16 @@
   
   <div class="field-group1">
     <label for="card-number">Card Number</label><br>
-    <input name='card-number' class="card-number" type="text" inputmode="numeric" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+    <input name='card-number' class="card-number" type="text" inputmode="text" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" onkeypress="return checkNumber(event)">
     <p id="error-ccnum" class="error-text"></p>
   </div>
   
   <div class="field-group2">
     <label for="exp-date">Exp. Date (MM/YY)</label>
     <label for="cvc" class="cvc-label">CVC</label><br>
-    <input name="mm-number" class="mm-number" type="text" inputmode="numeric" maxlength="2" placeholder="MM">
-    <input name="yy-number" class="yy-number" type="text" inputmode="numeric" maxlength="2" placeholder="YY">
-    <input name="cvc-number" class="cvc-number" type="text" inputmode="numeric" maxlength="3" placeholder="e.g. 123">
+    <input name="mm-number" class="mm-number" type="text" inputmode="numeric" maxlength="2" placeholder="MM" onkeypress="return checkNumber(event)">
+    <input name="yy-number" class="yy-number" type="text" inputmode="numeric" maxlength="2" placeholder="YY" onkeypress="return checkNumber(event)">
+    <input name="cvc-number" class="cvc-number" type="text" inputmode="numeric" maxlength="3" placeholder="e.g. 123" onkeypress="return checkNumber(event)">
     <p id="error-exp-cvc" class="error-text"></p>
   </div>
   
@@ -79,7 +79,7 @@
   <img src="./images/icon-complete.svg" alt="" class="img-complete">
   <h1>Thank you!</h1>
   <p class="small-text">We've added your card details</p> 
-  <button type="button" id="btn-continue">Continue</button>
+  <button type="button" id="btn-continue" onclick="refreshPage()">Continue</button>
 </div>
   
   

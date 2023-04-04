@@ -1,12 +1,12 @@
 //declared notification 
-const notifContainer = document.querySelector(".notif-container");
-const closeBtn = document.querySelector(".notif-container .close-img");
+let notifContainer = document.querySelector(".notif-container");
+let closeBtn = document.querySelector(".notif-container .close-img");
 let notifText = document.getElementById("notif-text");
 
 //declared form and button
-const form = document.querySelector(".input-container");
-const tyContainer = document.querySelector(".ty-container");
-const submitBtn = document.getElementById("btn-submit");
+let form = document.querySelector(".input-container");
+let tyContainer = document.querySelector(".ty-container");
+let submitBtn = document.getElementById("btn-submit");
 let inputs = document.querySelectorAll("input");
 
 //declared card holder name
@@ -112,56 +112,41 @@ cvc.addEventListener("keyup", (e) => {
     }
 })
 
-
-
-// I don't understand how to check for errors here. 
-// I've done a similar excersise where i used this code to check for text in each input, and then submitting
-
-
-// form.addEventListener('submit', (e) => {
-// 	e.preventDefault();
-// 	inputs.forEach((input) => {
-// 		if (!input.value) {
-// 			input.parentElement.classList.add('input-error');
-// 		} else {
-// 			input.parentElement.classList.remove('error');
-// 			if (input.type == 'email') {
-// 				if (validateEmail(input.value)) {
-// 					input.parentElement.classList.remove('error');
-// 				} else {
-// 					input.parentElement.classList.add('error');
-// 				}
-// 			}
-// 		}
-// 	});
-// });
-
-// But it doesn't seem to work here
-// Also instead of adding a class ("input-error"), I want for it to add .textContent inside errorText like:
-
-// const errorText = document.querySelectorAll("error-text");
-// ...
-// errorText.textContent = "Can't be blank";
-
-//But it only works with one of the .error-text, when it even works
-
-
-// Here is a place holder, it checks for any input in any input-field 
-// If none, displays notification text. If it finds at least one symbol in any field it lets you in
-// Still not sure why is it satisfied with one input, while the code above won't let you in, unless you fill all of the fields
-// And I haven't even started yet writing a code for checking for correct inputs like numbers/text only 
+function checkNumber(event) {
+    var aCode = event.which ? event.which : event.keyCode;
+    if (aCode > 31 && (aCode < 48 || aCode > 57)) return false;
+    return true;
+    
+}    
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     inputs.forEach((input) => {
 		if (!input.value) {
             notifText.textContent = "Oh-oh, it seems like you haven't done it right. Give it another try."
+            input.parentElement.classList.add("error-message");
+
+        } else if (ccNum.value.length < 16) {
+            ccNum.parentElement.classList.add("error-message-ccNum");
         } else {
+            input.parentElement.classList.remove("error-message");
+            ccNum.parentElement.classList.remove("error-message-ccNum");
+       }
+    
+       if (nameCH.value && 
+            ccNum.value.length >= 16 &&
+            expMM.value &&
+            expYY.value &&
+            cvc.value) {
             notifText.textContent = "Yay! You made it! I can't believe it worked! Thank you very much for your help."
             form.classList.add("hidden");
             tyContainer.classList.remove("hidden");
-        }
-})
+       }
+    })
 });
 
-// Whoever reads this, I hope I explained my problem correctly :)
+function refreshPage() {
+    window.location.reload();
+}
+
+
